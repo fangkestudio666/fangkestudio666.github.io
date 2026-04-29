@@ -1,7 +1,7 @@
 # USER.md - About Your Human
 
 - **Name:** 卡皮小小
-- **What to call them:** 卡皮小小
+- **What to call them:** 万叔
 - **Pronouns:** _(未明确)_
 - **Timezone:** Asia/Shanghai (GMT+8)
 - **Notes:** 工程咨询领域资深专家
