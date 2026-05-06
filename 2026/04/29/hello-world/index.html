@@ -272,7 +272,7 @@
 </ul>
 <h2 id="最新文章"><a href="#最新文章" class="headerlink" title="最新文章"></a>最新文章</h2><p>更多专业内容持续更新中，敬请期待。</p>
 <hr>
-<p><em>联系我们：<a href="mailto:&#51;&#x31;&#x37;&#49;&#53;&#48;&#48;&#x30;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;">31715000@qq.com</a></em></p>
+<p><em>联系我们：<a href="mailto:&#x33;&#x31;&#x37;&#x31;&#x35;&#x30;&#48;&#48;&#x40;&#113;&#113;&#x2e;&#x63;&#111;&#109;">31715000@qq.com</a></em></p>
 
     </div>
 
@@ -373,15 +373,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var month = String(today.getMonth() + 1).padStart(2, '0');
   var day = String(today.getDate()).padStart(2, '0');
   var dateStr = year + '-' + month + '-' + day;
-  var dateDisplay = year + '年' + (month * 1) + '月' + (day * 1) + '日';
+  var dateDisplay = month * 1 + '月' + day * 1 + '日';
   
-  // Update first post's date to today's date
-  var firstPostMeta = document.querySelector('.posts-expand .post:first-child .post-meta time');
-  if (firstPostMeta) {
-    firstPostMeta.textContent = dateDisplay;
-    firstPostMeta.setAttribute('datetime', dateStr + 'T08:00:00+08:00');
-    firstPostMeta.setAttribute('title', '修改时间：' + dateStr + ' 08:00:00');
-  }
+  // Update ALL posts' date to today
+  var allPostMetas = document.querySelectorAll('.posts-expand .post-meta time');
+  allPostMetas.forEach(function(meta) {
+    meta.textContent = dateDisplay;
+    meta.setAttribute('datetime', dateStr + 'T08:00:00+08:00');
+  });
 });
 </script>
 
