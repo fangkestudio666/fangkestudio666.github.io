@@ -214,7 +214,7 @@
 <h3 id="造价咨询"><a href="#造价咨询" class="headerlink" title="造价咨询"></a>造价咨询</h3><p>提供工程造价咨询、概算编制、预算审核、结算审计等全流程造价服务。</p>
 <h3 id="其他服务"><a href="#其他服务" class="headerlink" title="其他服务"></a>其他服务</h3><p>可根据项目具体需求，灵活整合各类工程咨询服务，具体请联系沟通。</p>
 <hr>
-<p><strong>咨询合作：</strong> <a href="mailto:&#x33;&#49;&#55;&#x31;&#53;&#48;&#48;&#x30;&#x40;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#x6d;">31715000@qq.com</a></p>
+<p><strong>咨询合作：</strong> <a href="mailto:&#x33;&#49;&#x37;&#x31;&#x35;&#48;&#x30;&#x30;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#109;">31715000@qq.com</a></p>
 
       </div>
       
@@ -279,6 +279,28 @@
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Only run on homepage
+  if (!document.querySelector('.posts-expand')) return;
+  
+  // Get today's date components
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = String(today.getMonth() + 1).padStart(2, '0');
+  var day = String(today.getDate()).padStart(2, '0');
+  var dateStr = year + '-' + month + '-' + day;
+  var dateDisplay = year + '年' + (month * 1) + '月' + (day * 1) + '日';
+  
+  // Update first post's date to today's date
+  var firstPostMeta = document.querySelector('.posts-expand .post:first-child .post-meta time');
+  if (firstPostMeta) {
+    firstPostMeta.textContent = dateDisplay;
+    firstPostMeta.setAttribute('datetime', dateStr + 'T08:00:00+08:00');
+    firstPostMeta.setAttribute('title', '修改时间：' + dateStr + ' 08:00:00');
+  }
+});
+</script>
 
 </body>
 </html>
